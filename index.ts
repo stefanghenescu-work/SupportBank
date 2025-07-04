@@ -5,10 +5,11 @@ const fs = require('fs')
 const results = [];
 const moment = require('moment');
 
-
+// to do function to read file .csv or .json
 function readFile(): void {
 
 }
+
 fs.createReadStream('DodgyTransactions2015.csv')
   .pipe(csv())
   .on('data', (data: never) => results.push(data))
